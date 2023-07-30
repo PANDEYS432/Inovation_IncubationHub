@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+   <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+   <!-- Customized Bootstrap Stylesheet -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <!-- Template Stylesheet -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* background-color: #f2f2f2; */
+      margin: 0;
+      padding: 0;
+      background-image: url('./img/bgc.jpg');
+      background-size: cover;
+     background-repeat: no-repeat;
+     height: 100vh;
+      background-color: #cccccc;
+    }
+   
+  
+    .navbar {
+      background-color: #091E3E;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+    }
+    
+    .navbar-logo {
+      float: left;
+    }
+    
+    .navbar-logo img {
+      height: 80px;
+      width: 80px;
+      margin-right: 10px;
+    }
+    
+    .navbar-heading {
+      text-align: center;
+     
+     
+    }
+    .container-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+    }
+
+  
+    .container {
+      max-width: 50%;
+      
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+    @media (max-width: 850px) {
+      .navbar {
+         height: 90px;
+       
+      }
+      .container {
+      
+        height: 100%;
+       
+      }
+      
+      
+      
+    }
+     
+    h1 {
+      text-align: center;
+      
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+     
+    .button-container {
+      display: flex;
+      flex-direction: column;
+    
+    }
+
+    .button-container button {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .button-container button:hover {
+      background-color: #45a049;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+    }
+
+    /* Styling for the overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+    }
+    .popup h4{
+          text-align: center;
+
+    }
+    .sub-buttons {
+      display: none;
+      justify-content: center;
+       transform: translateX(15%);
+       
+    }
+    .sub-buttons button{
+      text-align: center;
+    }
+   
+
+    
+  .container h3{
+    text-align: center;
+  }
+
+footer {
+  background-color:#091E3E ;
+bottom: 0;
+position: absolute;
+
+width: 100%;
+}
+@media (max-width: 640px) {
+  footer{
+    position: fixed;
+  }
+  
+}
+.foot{
+  
+  padding-left: 10px;
+  text-align: center;
+  color: white;
+  height: 35px;
+}
+
+.iconstab{
+  float: right;
+}
+
+
+
+.rights {
+  width: 100%;
+  background-color: #061429;
+  text-align: center;
+  color: white;
+  justify-content:end;
+  
+
+}
+
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var button1 = document.getElementById("button1");
+      var subButtons = document.getElementById("subButtons");
+
+      button1.addEventListener("click", function() {
+        if (subButtons.style.display === "block") {
+          subButtons.style.display = "none";
+        } else {
+          subButtons.style.display = "block";
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+    <div class="background-image">
+     
+        <div class="navbar">
+            <div class="navbar-logo">
+              <img src="img/MNNIT_TBI_logo_Low.png" alt="Logo">
+            </div>
+            <div class="navbar-heading">
+              <h2 style="color:white ">Innovation & Incubation Hub MNNIT Foundation</h2>
+            </div>
+            <div class="iconstab">
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/TBIMnnit" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100093137149244" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/tbi-mnnit-b07996279/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/tbimnnit/" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.youtube.com/channel/UCqij1wzxk4jH9eb7wNbSHeg" target="_blank"><i class="fab fa-youtube fw-normal"></i></a>
+            </div>
+    
+          </div>
+          <div class="container-wrapper">
+  <div class="container">
+    <h3 >Registration Process</h3>
+    <div class="button-container">
+       <!-- Button to trigger the pop-up -->
+  <button id="button1" onclick="showPopup()">COMPANY Registration</button>
+  <div class="sub-buttons" id="subButtons" >
+    <button>SECTION 8</button>
+    <button>PRIVATE</button>
+    <button>NGO</button>
+  </div>
+
+  <!-- Pop-up content -->
+  <div id="popup" class="popup">
+    <h4 >Contact TBI MNNIT</h4>
+    <p><i class="fa fa-envelope-open me-2"></i>tbimnnit@gmail.com</p>
+    <p><i class="fa fa-envelope-open me-2"></i>anubhav-r@mnnit.ac.in</p>
+    <button onclick="hidePopup()">Close</button>
+  </div>
+
+  <!-- Overlay to darken the background -->
+  <div id="overlay" class="overlay"></div>
+
+  <script>
+    function showPopup() {
+      var popup = document.getElementById("popup");
+      var overlay = document.getElementById("overlay");
+      popup.style.display = "block";
+      overlay.style.display = "block";
+    }
+
+    function hidePopup() {
+      var popup = document.getElementById("popup");
+      var overlay = document.getElementById("overlay");
+      popup.style.display = "none";
+      overlay.style.display = "none";
+    }
+  </script>
+      
+     
+      <button><a href="https://services.dpiit.gov.in/lms/memberRegistration" target="_blank">DPIIT Registration</a></button>
+      <button><a href="https://startinup.up.gov.in/" target="_blank">STARTIN UP Registration</a></button>
+      <button> <a href="https://www.youtube.com/watch?v=4OhHzV_PgGM" target="_blank">Registration Guidance </a><a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.youtube.com/watch?v=4OhHzV_PgGM" target="_blank"><i class="fab fa-youtube fw-normal"></i></a></button>
+
+     
+    </div>
+  </div>
+</div>
+
+   <footer>
+    
+  
+  <div class="  px-5 ">
+    <div class="row ">
+        <div class=" foot " >
+            
+                <small class="me-3 text-light" ><i class="fa fa-map-marker-alt me-2"></i>MNNIT Allahabad, Prayagraj (U.P) India</small>
+                <small class="text-light"><i class="fa fa-envelope-open me-2"></i>tbimnnit@gmail.com</small>
+                <small class="text-light" style="padding: 10px;"><i class="fa fa-envelope-open me-2"></i>anubhav-r@mnnit.ac.in</small>
+               
+            
+       
+        
+            
+    </div>
+    <div class="rights"><p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Innovation & Incubation Hub MNNIT Foundation</a>. All Rights Reserved. 
+    </div>
+</div>
+</footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
